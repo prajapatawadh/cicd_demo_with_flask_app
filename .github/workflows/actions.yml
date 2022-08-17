@@ -1,0 +1,12 @@
+name: cicd for python app
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  run_shell_command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo anything
+        run : echo Awadh Prajapat
