@@ -17,4 +17,7 @@ jobs:
           pip install -r requirements.txt
       
       - name: Check docker installed or not
-        run: docker run hello-world
+        run: docker run 
+
+      - name: Push to docker hub
+        uses: docker/build-push-action/@v1
