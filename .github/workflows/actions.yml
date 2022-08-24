@@ -26,5 +26,5 @@ jobs:
           python -m pip install --upgrade pipenv wheel
       - name: Install dependencies
         run: |
-          pipenv install --deploy --dev
+          pipenv install pytest
 
