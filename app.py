@@ -10,7 +10,6 @@ db = models.db
 db.init_app(app)
 db.app = app
 
-
 # the application's main/index page
 @app.route('/')
 def index():
