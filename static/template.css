@@ -26,7 +26,7 @@ body {
   .banner {
     position: relative;
     height: 300px;
-    background: #fc5c7d;
+    background: #120709;
     background: -webkit-linear-gradient(to right, #6a82fb, #fc5c7d);
     background: linear-gradient(to right, #6a82fb, #fc5c7d);
     background-size: cover;
