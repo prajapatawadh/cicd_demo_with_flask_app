@@ -68,7 +68,7 @@ jobs:
     needs: [Test-local]
     steps:
       - name: Deploy
-        run: echo Deploying the app to aws ec2 instance
+        run: echo Deploying the flask app to aws ec2 instance
 
       - name: Deploy on ec2
         env:
