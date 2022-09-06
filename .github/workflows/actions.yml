@@ -87,7 +87,7 @@ jobs:
             echo ${USER_PASSWORD} | sudo -S systemctl restart ${SERVICE_NAME} "
   
 
-  Test-Remote:
+  Test-Application-Remotely:
     runs-on: ubuntu-latest
     environment:
       name: Development
