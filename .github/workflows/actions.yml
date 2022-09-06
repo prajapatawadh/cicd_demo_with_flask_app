@@ -85,3 +85,16 @@ jobs:
             cd ${APP_DIR} &&
             git pull &&
             echo ${USER_PASSWORD} | sudo -S systemctl restart ${SERVICE_NAME} "
+  
+
+  Test-Remote:
+    runs-on: ubuntu-latest
+    environment:
+      name: Development
+
+    needs: [DeployDev]
+    steps:
+    - name: Test application
+      run: |
+        sleep 5
+        curl ${{ secrets.HOST_NAME  }}:${{ secrets.PORT  }}
