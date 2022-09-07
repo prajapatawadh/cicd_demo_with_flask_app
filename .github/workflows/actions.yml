@@ -2,12 +2,11 @@ name: GitHub Actions Demo
 on: 
   push:
     branches: [master]
-  # pull_request:
-  #   branches: [master]
 
 jobs:
 
   Build:
+
     runs-on: ubuntu-latest
     environment:
       name: Development
@@ -17,6 +16,7 @@ jobs:
         python-version: [3.8]
 
     steps:
+     
       - name: Check out code
         uses: actions/checkout@master
       
@@ -32,16 +32,19 @@ jobs:
       
 
   Test-local:
+    
     runs-on: ubuntu-latest
     environment:
       name: Development
 
     needs: [Build]
+    
     strategy:
       matrix:
         python-version: [3.8]
 
     steps:
+    
       - name: Check out code
         uses: actions/checkout@master
       
