@@ -99,5 +99,5 @@ jobs:
     
     - name: Test application
       run: |
-        sleep 4
+        sleep 4 
         curl ${{ secrets.HOST_NAME  }}:${{ secrets.PORT  }}
