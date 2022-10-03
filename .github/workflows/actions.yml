@@ -1,4 +1,4 @@
-name: GitHub Actions on Flask app   
+name: GitHub Actions on Flask app aws  
 on: 
   push:
     branches: [master]
@@ -38,7 +38,7 @@ jobs:
     needs: [Build]
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: [ 3.8 ]
 
     steps:
     
