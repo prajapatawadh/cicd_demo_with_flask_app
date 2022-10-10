@@ -1,4 +1,4 @@
-name: GitHub Actions on Flask app aws  
+name: GitHub Actions on Flask app via aws  
 on: 
   push:
     branches: [master]
