@@ -1,0 +1,24 @@
+name: Deploy app on aws using docker and GitHub actions/checkout
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    environment:
+      name: Development
+    strategy:
+      matrix:
+        python-version: [3.8]
+    
+    steps:
+      - name: checkout 
+        uses: actions/checkout@master
+     
+      - name: docker login
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          
