@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Development
-    needs: [Build]
+    needs: [Build-app]
     strategy:
       matrix:
         python-version: [ 3.8 ]
@@ -66,7 +66,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Development
-    needs: [Test-local]
+    needs: [Test-app-locally]
     
     steps:
      
@@ -93,7 +93,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Development
-    needs: [DeployDev]
+    needs: [Deploy-app]
     
     steps:
     
