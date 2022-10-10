@@ -45,7 +45,7 @@
 
 
 
-name: Deploy flask app to heroku.
+name: Deploy flask app to heroku using.
 
 on:
   push:
