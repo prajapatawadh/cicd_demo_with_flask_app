@@ -30,12 +30,12 @@ jobs:
           pip install -r requirements.txt
       
  
-  Test-app-locally:
+  Deploy-and-test-app-locally: 
 
     runs-on: ubuntu-latest
     environment:
       name: Development
-    needs: [Build-app]
+    needs: [ Build-app ]
     strategy:
       matrix:
         python-version: [ 3.8 ]
@@ -61,12 +61,12 @@ jobs:
           sleep 5
           curl http://127.0.0.1:5000/
 
-  Deploy-app:
+  Deploy-and-test-on-aws-ec2:
 
     runs-on: ubuntu-latest
     environment:
       name: Development
-    needs: [Test-app-locally]
+    needs: [ Deploy-and-test-app-locally ]
     
     steps:
      
@@ -93,7 +93,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Development
-    needs: [Deploy-app]
+    needs: [ Deploy-and-test-on-aws-ec2 ] 
     
     steps:
     
